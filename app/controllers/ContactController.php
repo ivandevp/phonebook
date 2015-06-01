@@ -37,7 +37,7 @@ class ContactController extends BaseController
 	{
 		$user = User::find($user_id);
 		$contacts = $user->contact();
-		return $contacts;
+		return View::make('contact.contactlist', array('contacts', $contacts));
 	}
 
 	public function contactdetail($user_id, $contact_id)

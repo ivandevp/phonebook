@@ -26,6 +26,6 @@ class USerController extends BaseController
 	public function userdetail($user_id)
 	{
 		$user = User::find($user_id);
-		return "User details:<br>Name: " . $user->name . "<br>Last name: " . $user->lastname;
+		return View::make('user.userdetail', array('data' => $user));
 	}
 }
